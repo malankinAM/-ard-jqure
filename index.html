@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+
+        <div class="bg_stars">
+            <div class="star star1"><img src="./img/s1.png" alt="" width="160px"></div>
+            <div class="star star2"><img src="./img/s2.png" alt="" width="80px"></div>
+            
+        </div>
+
+        <header>
+            <div class="logo">
+                <img src="./img/logo.png" alt="logo" width="50px">
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+            </div>
+        </header>
+
+        <section class="hero_sec">
+            <div class="title">
+                <h4 id="tab1">I</h4>
+                <h4 id="tab2">Love</h4>
+                <h4 id="tab3">Develop</h4>
+            </div>
+
+            <div id="tab1a" class="img_group show">
+                <img src="./img/1.jpg" alt="img" width="300" >
+                <img src="./img/2.jpg" alt="img" width="300">
+                <img src="./img/3.jpg" alt="img" width="300">
+            </div>
+            <div id="tab2a" class="img_group ">
+                <img src="./img/4.jpg" alt="img" width="300">
+                <img src="./img/5.jpg" alt="img" width="300">
+                <img src="./img/6.jpg" alt="img" width="300">
+            </div>
+            <div id="tab3a" class="img_group ">
+                <img src="./img/7.jpg" alt="img" width="300">
+                <img src="./img/8.jpg" alt="img" width="300">
+                <img src="./img/9.jpg" alt="img" width="300">
+            </div>
+        </section>
+
+        <div class="offerline">
+            <div class="offerline_marque">
+                <p>I love Frontend //
+                    I love developing websites //
+                    it is our life &nbsp;&nbsp;I love Frontend //
+                    I love developing websites //
+                    it is our life &nbsp;&nbsp;I love Frontend //
+                    I love developing websites //
+                    it is our life </p>
+            </div>
+        </div>
+
+    </main>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+        integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"
+        integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <script>
+$(document).ready(function(){
+$(".title h4").on('click',function(){
+    // alert("check");
+    $(this).addClass("active");
+    //get id
+    var tab = $(this).attr("id");
+    // console.log(tab);
+    if($(this).hasClass("active")){
+$(this).addClass("active");
+$(".title h4").not(this).removeClass("active");
+
+$(".img_group").removeClass("show");
+$("#"+tab+"a").addClass("show");
+    }//condition over
+});
+});
+        </script>
+</body>
+
+</html>
